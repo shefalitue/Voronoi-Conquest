@@ -1,8 +1,8 @@
 # Introduction
 
-In this document we will plot the main aspects of the game being developed as the Geometric Algorithms project. The game will have at its core the algorithm of \emph{Voronoi Diagram}. Furthermore, the game is a strategy game that can be played by two players.
+In this document we will plot the main aspects of the game being developed as the Geometric Algorithms project. The game will have at its core the algorithm of *Voronoi Diagram*. Furthermore, the game is a strategy game that can be played by two players.
 
-The purpose of the game is to, given the map of a land, maximize the area conquered by the player. The game starts with an empty map. In turns, each player will set a point corresponding to their army somewhere in the map. The next step is to calculate the \emph{Vornoi Diagram} defined by the points. Each point has an area of influence in the plane. After a given number of turns, the player with the greater area will be the winner. In the next sections, more details about the game are going to be given. 
+The purpose of the game is to, given the map of a land, maximize the area conquered by the player. The game starts with an empty map. In turns, each player will set a point corresponding to their army somewhere in the map. The next step is to calculate the *Vornoi Diagram* defined by the points. Each point has an area of influence in the plane. After a given number of turns, the player with the greater area will be the winner. In the next sections, more details about the game are going to be given. 
 
 # Game Features
 The starting-point of the game will be based on the total area conquered by each player. This functionality is quite simple. To make it more interesting, the game will be enhanced by adding more features to the gameplay.
@@ -24,5 +24,3 @@ There is also the floating point imprecision, which has been described in the Co
 Store in the data structure just the delanay triagulation, and then for showing we compute the voronoi diagram from that delanay triangulation. This can be done by taking the edges, and then we pick a perpendicular line in the iddle of that segment. Then, the intersection of all the bisectos will be the polygon in the voronoi diagram.
 
 Instead of polygons representing cities, we use points, and at the end of the game we can see the area of which player contains that point
-
-\end{document}
