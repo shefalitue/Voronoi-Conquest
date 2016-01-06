@@ -2,17 +2,19 @@
 var bboxWidth = 800
 var	bboxHeight = 600
 
-var	bbox = {
+var	
+bbox = {
 	xl: 0,
 	xr: this.bboxWidth,
 	yt: 0,
 	yb: this.bboxHeight
 };
 
-var colors = ["green","red"]
+var colors = ["aqua","red"]
 
 // Core vars
 var	sites = []
+
 var	voronoi
 var	svg
 
@@ -32,13 +34,14 @@ var VoronoiGame = {
 		.attr("width", window.bboxWidth)
 		.attr("height", window.bboxHeight)
 		.attr("style", "cursor:crosshair")
-		.attr("border", 2)
+		.attr("border", 0)
 		.on("click", function() {
 
 			var coordinates = d3.mouse(this)
 			VoronoiGame.addSite(coordinates)
 
 			if (++currentTurn > nTurns) {
+
 				alert("Game over")
 			}
 		})
@@ -47,11 +50,10 @@ var VoronoiGame = {
 		.attr("x", 0)
 		.attr("y", 0)
 		.attr("width", window.bboxWidth)
-		.attr("height", window.bboxHeight)
+		.attr("height", window.bboxHeight)	
 		.style("stroke", "black")
 		.style("fill", "none")
-		.style("stroke-width", 2);
-
+		.style("stroke-width", 0);
 	},
 
 	addSite: function(coordinates) {
@@ -66,7 +68,7 @@ var VoronoiGame = {
 	recompute : function(sites) {
 
 		// Clear svg
-		d3.select("svg").selectAll("line").remove()
+		svg.selectAll("line").remove()
 
 		// Recompute the diagram and draw it
 		this.drawSites(sites)
@@ -80,7 +82,7 @@ var VoronoiGame = {
 			
 			var site = sites[i]
 
-			window.svg.append("circle")
+			svg.append("circle")
 			.attr("cx",site.x)
 			.attr("cy",site.y)
 			.attr("r", 4)
@@ -94,12 +96,12 @@ var VoronoiGame = {
 
 			var edge = edges[i];
 
-			window.svg.append("line")
+			svg.append("line")
 			.attr("x1", edge.va.x)
 			.attr("y1", edge.va.y)
 			.attr("x2", edge.vb.x)
 			.attr("y2", edge.vb.y)
-			.attr("stroke", "black")
+			.attr("stroke", "white")
 			.attr("stroke-width", 2)
 		}
 	}
