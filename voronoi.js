@@ -24,9 +24,19 @@ Voronoi = {
 	 						"{x,y}"
 	 					  This means that for accesing the x-value of the second site you should do
 	 					  	"sites[1].x"
+		 	@parameter bbox :  the bounding box, used in order to define the boundaries of the outern
+		 	rectangle, which defines the plane in which the points are located. It has the following pattern:
+		 	
+		 	bbox = {
+				xl: 0,
+				xr: bounding box width,
+				yt: 0,
+				yb: bounding box height
+			};
+
 	 	@returns an array of Voronoi faces. The points of the face are in counterclockwise order.
 	 */
-	compute: function(sites) {
+	compute: function(sites, bbox) {
 		/* TODO */
 	}
 }
