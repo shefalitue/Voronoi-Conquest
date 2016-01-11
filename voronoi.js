@@ -35,6 +35,7 @@ Voronoi = {
 			};
 
 	 	@returns an array of Voronoi faces. The points of the face are in counterclockwise order.
+	 			 the faces are in the same order as the input sites (face[i] belongs to the site[i])
 	 */
 	compute: function(sites, bbox) {
 		/* TODO */
