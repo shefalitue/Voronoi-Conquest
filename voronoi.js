@@ -11,9 +11,13 @@ Voronoi = {
 	 * 
 	 * Usage: var face = new Face(points)
      *   	  // The x value of the third point:
-     *        var point = face.points[2].x 
+     *        var point = face.points[2].x
+     * 
+     * @param site : the site of the face
+     * @param points : the points representing the boundary of the face
      */
-	var Face = function(points) {
+	var Face = function(site, points) {
+		this.site = site
 		this.points = points
 	}
 
