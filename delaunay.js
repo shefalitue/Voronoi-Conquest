@@ -1,7 +1,7 @@
 var Delaunay;
 
 /* Usage: var delaunay = new Delaunay()
-		  var tirangles = delaunay.compute(sites)
+		  var triangles = delaunay.compute(sites)
 		  // The x value of the third point in the second triangle:
 		  var point = triangles[1].points[2].x
  */
