@@ -1,0 +1,77 @@
+html { 
+  background: url(../images/backgrounds/mapBackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body
+{
+	/*background-color: #ccccff;
+	background-image: url(../images/backgrounds/mapBackground.jpg);
+	background-repeat: no-repeat;*/
+}
+
+svg
+{
+	background : url(../images/backgrounds/westeros.jpg);
+	background-size: 800px 600px;
+	background-repeat: no-repeat;
+	opacity : 0.8;
+}
+
+.main
+{
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+
+	background-color: rgba(0, 0, 0, 0.6);
+	color: white;
+}
+
+
+
+#header
+{
+	background-color: rgba(0, 0, 0, 0.6);
+	height: 100px;
+
+	font-style: oblique;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerContent
+{
+	height: 100px;
+	float: left;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#left
+{
+	width: 10%;
+	margin-left: 20%;
+}
+
+
+#imgHeader
+{
+	max-width:100%;
+	max-height:100%;
+}
+
+#content
+{
+	border: 1px solid white;
+	height: 500px;
+}
+
+.playerForm
+{
+	border: 1px solid white;
+	width: 40%;
+	float: left;
+}
