@@ -65,13 +65,92 @@ svg
 
 #content
 {
-	border: 1px solid white;
 	height: 500px;
 }
 
 .playerForm
 {
-	border: 1px solid white;
-	width: 40%;
+	
+	width: 35%;
 	float: left;
+	margin-right: 5%;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.info
+{
+	width: 30%;
+	float: left;
+}
+
+.details
+{
+	width: 60%;
+	float: left;
+}
+
+.details select, input
+{
+	font-size: 15px;
+	vertical-align: top;
+}
+
+.info, .details
+{
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#submit
+{
+	width: 100%;
+	float: left;	
+	margin-top: 20px;
+}
+
+#submit button
+{
+	margin-left: 40%;
+	font-size: 20px;
+	border-bottom: none;
+	border-right: none;
+	
+	-moz-box-shadow: 0px 4px 4px #e6e6e6;
+	-webkit-box-shadow: 0px 4px 4px #e6e6e6;
+	box-shadow: 0px 4px 4px #e6e6e6;
+
+	cursor: pointer;
+
+	-webkit-transition: all 150ms ease;
+	transition: all 150ms ease;
+}
+
+#submit button:hover
+{
+	color:#0d0d0d;
+}
+
+#submit button:active
+{
+	-moz-box-shadow: 0px 1px 1px #e6e6e6;
+	-webkit-box-shadow: 0px 1px 1px #e6e6e6;
+	box-shadow: 0px 1px 1px #e6e6e6;
+
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+}
+
+#player1Flag, #player2Flag
+{
+	width: 50px;
+	height: 50px;
+	margin-left: 20px;
+	border: none;
+}
+
+#player1Flag img, #player2Flag img
+{
+	max-width:100%;
+	max-height:100%;
 }

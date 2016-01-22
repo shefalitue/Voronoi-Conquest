@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>	
 	<script type="text/javascript" src="temp/rhill-voronoi-core.js"></script>
 	<script type="text/javascript" src="demo.js"></script>
+	<script type="text/javascript" src="javascript/home.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
@@ -15,43 +16,61 @@
 
 <!-- onload="VoronoiGame.init();" -->
 <body>
+	<!--<embed src="music/BGM.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" />-->
+
 	<div id = "header" class = "main">
 		<div class = "headerContent" id = "left"><img src="images/icons/flagHeader.png" id = "imgHeader"/></div>
 		<div class = "headerContent" id = "right"><h1>Game of Thrones Map Conquest</h1></div>
 	</div>
 	<div id = "content" class = "main">
-		Insert rules here --->
+		<div>
+			<h2>How to play</h2>
+			<p>These are the rules:</p>
+		</div>
+		
 
-		<div class = "playerForm">
+		<div class = "playerForm" style = "margin-left: 10%; border-right: 1px solid white;">
 			<h2>Player 1</h2>
 			<form>
-				Name: <br>
-				<input type = "text" name = "player1Name"> <br>	
-				House: <br>
-				<select>
+				<div class = "info">Name: </div>
+				<div class = "details"> <input type = "text" name = "player1Name"> </div>	
+				<div class = "info">Flag: </div> 
+				<div class = "details">
+				<select onchange = "changeFlag(value)">
 					<option selected disabled>Select a house</option>
 					<option value="baratheon">Baratheon</option>
 					<option value="targaryen" >Targaryen</option>
 					<option value="tyrell">Tyrell</option>
-				</select
+				</select>
+				<img src="" id = "player1Flag">
+
+				</div>
 			</form>
 		</div>
 
 		<div class = "playerForm">
 			<h2>Player 2</h2>
 			<form>
-				Name: <br>
-				<input type = "text" name = "player2Name"> <br>	
-				House: <br>
-				<select>
+				<div class = "info">Name: </div> 
+				<div class = "details"><input type = "text" name = "player2Name"> </div>	
+				<div class = "info">Flag: </div>
+				<div class = "details">
+				<select onchange = "changeFlag(value)">
 					<option selected disabled>Select a house</option>
 					<option value="lannister">Lannister</option>
 					<option value="stark" >Stark</option>
 					<option value="bolton">Bolton</option>
-				</select
+				</select>
+				<img src="" id = "player2Flag">
+				
+				</div>
 			</form>
 		</div>
-		<!--<embed src="music/BGM.mp3" width="180" height="90" loop="true" autostart="true" hidden="true" /> -->
+
+		<div id = "submit">
+			<button type = "submit" value = "Submit">Start Game</button>
+		</div>
+		
 	</div>
 
 </body>
